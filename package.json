@@ -6,5 +6,9 @@
   "author": "Marco Ollivier <marcopollivier@gmail.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": ["home-app", "header-app", "footer-app"]
+  "workspaces": ["home-app", "header-app", "footer-app"],
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  }
 }
