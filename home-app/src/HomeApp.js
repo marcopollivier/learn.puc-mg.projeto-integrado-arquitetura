@@ -14,7 +14,7 @@ const data1 = {
       "slack-help-channel": "https://gophers.slack.com/archives/C172TMM9V"
   },
   "fields": {
-    "title": "ID",
+    "title": "pessoas_go",
     "values": [
       { "id": 1, "lastName": 'Snow',        "firstName": 'Jon',       "age": 35 },
       { "id": 2, "lastName": 'Lannister',   "firstName": 'Cersei',    "age": 42 },
@@ -30,7 +30,7 @@ const data1 = {
 }
 
 const data2 = {
-  "title": "pessoas",
+  "title": "pessoas_clojure",
   "type": "DataGridFullname",
   "owner": {
       "name": "plataforma",
