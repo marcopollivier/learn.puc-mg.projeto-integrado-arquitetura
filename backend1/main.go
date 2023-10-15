@@ -34,8 +34,8 @@ func main() {
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With")
 		data := DataGridBase{
 			Title: "pessoas",
-			// Type:  "DataGridBase",
-			Type: "DataGridFullname",
+			Type:  "DataGridBase",
+			// Type: "DataGridFullname",
 			Owner: Owner{
 				Name:             "plataforma",
 				SlackHelpChannel: "https://gophers.slack.com/archives/C172TMM9V",
@@ -53,7 +53,6 @@ func main() {
 			{ID: 7, LastName: "Clifford", FirstName: "Ferrara", Age: intPtr(44)},
 			{ID: 8, LastName: "Frances", FirstName: "Rossini", Age: intPtr(36)},
 			{ID: 9, LastName: "Roxie", FirstName: "Harvey", Age: intPtr(65)},
-			{ID: 10, LastName: "Marco", FirstName: "Harvey", Age: intPtr(65)},
 		}
 
 		w.Header().Set("Content-Type", "application/json")
