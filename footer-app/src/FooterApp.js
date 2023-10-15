@@ -1,12 +1,16 @@
-import React from 'react'
-import './FooterApp.css'
+import React from 'react';
+import './FooterApp.css';
 
-function App() {
+const FooterApp = () => {
   return (
-    <div className='footer'>
-      <div>Demo Projeto integrado por Marco Ollivier</div>
+    <div className="Footer">
+      <div className="FooterContent">
+        <span>Sob a <a href="https://opensource.org/licenses/MIT" className="license-link">Licença MIT</a></span>
+        <span>criado por</span>
+        <a href="https://marcopollivier.github.io" className="author-link">Marco Ollivier</a>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default FooterApp;

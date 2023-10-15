@@ -35,24 +35,18 @@ module.exports = {
         }),
 
         new ModuleFederationPlugin({
-            name: "HomeApp",  // This application named 'HomeApp'
-            // This is where we define the federated modules that we want to consume in this app. 
-            // Note that we specify "Header" as the internal name 
-            // so that we can load the components using import("Header/"). 
-            // We also define the location where the remote's module definition is hosted: 
-            // Header@[http://localhost:3001/remoteEntry.js]. 
-            // This URL provides three important pieces of information: the module's name is "Header", it is hosted on "localhost:3001", 
-            // and its module definition is "remoteEntry.js".
+            name: "HomeApp",
             remotes: { 
-                "HeaderApp": "HeaderApp@http://localhost:3001/remoteEntry.js",            
+                "HeaderApp": "HeaderApp@http://localhost:3001/remoteEntry.js",
+                "FooterApp": "FooterApp@http://localhost:3002/remoteEntry.js"
             },
-            shared: {  // and shared
-                ...dependencies,  // other dependencies
-                react: { // react
+            shared: {  
+                ...dependencies,
+                react: {
                     singleton: true,
                     requiredVersion: dependencies["react"],
                 },
-                "react-dom": { // react-dom
+                "react-dom": {
                     singleton: true,
                     requiredVersion: dependencies["react-dom"],
                 },

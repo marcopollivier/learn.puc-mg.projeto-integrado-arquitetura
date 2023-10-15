@@ -1,9 +1,21 @@
-.footer {
+.Footer {
   background-color: #000;
   color: white;
   padding: 20px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.license-link, 
+.author-link {
+  color: #61dafb;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.license-link:hover, 
+.author-link:hover {
+  text-decoration: underline;
 }
