@@ -10,7 +10,17 @@ function App() {
       <Suspense fallback={<div>Loading Header...</div>}>
         <Header />
       </Suspense>
-      <div className="Container">Demo home page</div>
+      <div className="Container">
+        
+        <div className="Box">One</div>
+        <div className="Box">Two</div>
+        <div className="Box">Three</div>
+        <div className="Box">Three</div>
+        <div className="Box">Three</div>
+        <div className="Box">Three</div>
+        <div className="Box">Three</div>
+
+      </div>
       <Suspense fallback={<div>Loading footer...</div>}>
         <Footer />
       </Suspense>

@@ -4,7 +4,7 @@ import './HeaderApp.css'
 function App() {
   return (
     <div className='Header'>
-      <div>Demo Projeto integrado por Marco Ollivier</div>
+      <h1>Demo Projeto integrado por Marco Ollivier</h1>
     </div>
   )
 }

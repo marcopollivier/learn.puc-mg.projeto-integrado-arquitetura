@@ -1,11 +1,11 @@
 .Footer {
   background-color: #000;
   color: white;
-  padding: 20px;
+  padding: 20px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 }
 
 .license-link, 
