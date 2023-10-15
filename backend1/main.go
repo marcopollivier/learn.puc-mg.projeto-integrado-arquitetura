@@ -29,16 +29,20 @@ type DataGridBase struct {
 
 func main() {
 	http.HandleFunc("/pessoas", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "http://localhost:3000")
+		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With")
 		data := DataGridBase{
 			Title: "pessoas",
-			Type:  "DataGridBase",
+			// Type:  "DataGridBase",
+			Type: "DataGridFullname",
 			Owner: Owner{
 				Name:             "plataforma",
 				SlackHelpChannel: "https://gophers.slack.com/archives/C172TMM9V",
 			},
 		}
 
-		data.Fields.Title = "ID"
+		data.Fields.Title = "pessoas1"
 		data.Fields.Values = []Person{
 			{ID: 1, LastName: "Snow", FirstName: "Jon", Age: intPtr(35)},
 			{ID: 2, LastName: "Lannister", FirstName: "Cersei", Age: intPtr(42)},
@@ -49,6 +53,7 @@ func main() {
 			{ID: 7, LastName: "Clifford", FirstName: "Ferrara", Age: intPtr(44)},
 			{ID: 8, LastName: "Frances", FirstName: "Rossini", Age: intPtr(36)},
 			{ID: 9, LastName: "Roxie", FirstName: "Harvey", Age: intPtr(65)},
+			{ID: 10, LastName: "Marco", FirstName: "Harvey", Age: intPtr(65)},
 		}
 
 		w.Header().Set("Content-Type", "application/json")
