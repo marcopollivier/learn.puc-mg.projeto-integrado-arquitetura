@@ -1,0 +1,10 @@
+{
+  "name": "learn.puc-mg.projeto-integrado-arquitetura",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:marcopollivier/learn.puc-mg.projeto-integrado-arquitetura.git",
+  "author": "Marco Ollivier <marcopollivier@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["home-app", "header-app", "footer-app"]
+}
