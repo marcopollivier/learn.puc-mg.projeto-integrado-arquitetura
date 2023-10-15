@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   return (
     <div className='HeaderApp'>
-      <div>Header</div>
+      <div>Header Microfrontend</div>
     </div>
   )
 }

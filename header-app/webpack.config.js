@@ -1,8 +1,11 @@
-//home-app/webpack.config.js
+//header-app/webpack.config.js
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin"); 
+const { dependencies } = require("./package.json");
+
 
 module.exports = {
-    entry: "./src/index",
+    entry: "./src/entry.js",
     mode: "development",
     devServer: {
         port: 3001,
@@ -30,6 +33,25 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./public/index.html",
+        }),
+        
+        new ModuleFederationPlugin({
+            name: "HeaderApp",  // This application named 'HeaderApp'
+            filename: "remoteEntry.js",  // output a js file
+            exposes: { // which exposes
+              "./Header": "./src/App",  // a module 'Header' from './src/App'
+            },
+            shared: {  // and shared
+              ...dependencies,  // some other dependencies
+              react: { // react
+                singleton: true,
+                requiredVersion: dependencies["react"],
+              },
+              "react-dom": { // react-dom
+                singleton: true,
+                requiredVersion: dependencies["react-dom"],
+              },
+            },
         }),
     ],
     resolve: {
