@@ -39,7 +39,7 @@ module.exports = {
             name: "HeaderApp",  // This application named 'HeaderApp'
             filename: "remoteEntry.js",  // output a js file
             exposes: { // which exposes
-              "./Header": "./src/App",  // a module 'Header' from './src/App'
+              "./Header": "./src/HeaderApp",  // a module 'Header' from './src/HeaderApp'
             },
             shared: {  // and shared
               ...dependencies,  // some other dependencies

@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import './App.css';
+import './HomeApp.css';
 
 const Header = lazy(() => import('HeaderApp/Header'));
 
@@ -9,7 +9,7 @@ function App() {
       <Suspense fallback={<div>Loading Header...</div>}>
         <Header />
       </Suspense>
-      <div className="container">Demo home page</div>
+      <div className="Container">Demo home page</div>
     </div>
   );
 }

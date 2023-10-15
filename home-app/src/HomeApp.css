@@ -1,0 +1,12 @@
+/* Removendo estilos não utilizados */
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.Container {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
